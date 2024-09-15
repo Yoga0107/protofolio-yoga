@@ -1,23 +1,15 @@
-import './globals.css';
-import SideNav from './components/SideNav';
+// src/app/layout.tsx
+import './globals.css'; // Import your global styles if any
+import { ReactNode } from 'react';
 
-export const metadata = {
-  title: 'Portfolio Site',
-  description: 'Oktaviardi Pratama Putra’s Portfolio',
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <title>Your Portfolio</title> {/* Set your title here */}
+      </head>
       <body>
-        <div className="flex">
-          <SideNav />
-          <div className="flex-1">{children}</div>
-        </div>
+        {children} {/* This will render the pages */}
       </body>
     </html>
   );
