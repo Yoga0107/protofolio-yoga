@@ -28,7 +28,7 @@ const SideNav = () => {
           <Link href="/" className="p-4 hover:bg-[#A1887F]">Home</Link>
           <Link href="/projects" className="p-4 hover:bg-[#A1887F]">Projects</Link>
           <Link href="/experience" className="p-4 hover:bg-[#A1887F]">Experience</Link>
-          <Link href="/connect" className="p-4 hover:bg-[#A1887F]">Let's Connect</Link>
+          <Link href="/connect" className="p-4 hover:bg-[#A1887F]">Let&apos;s Connect</Link>
         </nav>
       )}
     </div>
