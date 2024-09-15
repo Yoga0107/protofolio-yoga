@@ -1,19 +1,21 @@
 import SideNav from './components/SideNav';
 
-const HomePage = () => {
+export default function Home() {
   return (
     <div className="flex">
-      <SideNav />
-      <main className="flex-1 p-4">
-        <h1>Hello 👋,</h1>
-        <h2>I&apos;m Oktaviardi Pratama Putra</h2>
-        <p>
-          Hi, I&apos;m Oktaviardi Pratama, a passionate individual Frontend developer with a strong focus on startups, products, UI, UX, and delivering high-quality development. Based in Bekasi, I offer freelance services as both an individual and as part of a team. I have a wide range of skills, including HTML5, CSS3, VueJS, ReactJs, Laravel, JQuery, Ionic, Python (Flask, Django), MongoDB, Mongoose, Postgres SQL, Socket IO, Firebase, GraphQL, and Redis. If you&apos;re in need of a reliable and skilled developer, feel free to contact me. I&apos;m confident that we can work together to achieve great things.
+      <main className="flex-1 p-8">
+        <h1 className="text-3xl font-bold">Hello</h1>
+        <p className="mt-4">
+          I'm <span className="font-bold">Yoga Arditya Putra</span><br />
+          <span className="text-lg">Software Engineer - Application Developer</span>
         </p>
-        <button className="bg-blue-500 text-white p-2 rounded">Let&apos;s Connect</button>
+        <p className="mt-6 text-justify">
+        Hello, I'm Yoga Arditya Putra, a dedicated application developer with a passion for crafting both web and mobile applications. With experience spanning across both frontend and backend development, I focus on delivering robust and scalable solutions. My expertise includes working with technologies such as PostgreSQL, React Native, React.js, Tailwind CSS, REST APIs, WordPress, PHP, Laravel, and more. Whether it's building a seamless user experience or developing efficient backend systems, I thrive on turning ideas into reality. If you're seeking a reliable and skilled developer, let's connect to create something exceptional together.
+        </p>
+        <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg">
+          Let’s Connect
+        </button>
       </main>
     </div>
   );
-};
-
-export default HomePage;
+}
