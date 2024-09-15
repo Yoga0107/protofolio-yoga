@@ -1,29 +1,33 @@
-"use client";
 // src/app/components/SideNav.tsx
+"use client"; // Mark this as a Client Component
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'; // Make sure to install react-icons
 
 const SideNav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className={`side-nav ${isOpen ? 'open' : ''}`}>
-      <button onClick={() => setIsOpen(!isOpen)}>
-        {/* Use an arrow or icon instead of X */}
-      </button>
+    <div className={`fixed top-0 left-0 h-full bg-gray-800 text-white transition-all duration-300 ${isOpen ? 'w-64' : 'w-16'}`}>
+      <div className="flex items-center justify-between p-4">
+        <h2 className={`text-lg font-bold transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>My Portfolio</h2>
+        <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
+          {isOpen ? <HiChevronLeft /> : <HiChevronRight />}
+        </button>
+      </div>
       <nav>
         <ul>
-          <li>
-            <Link href="/">Home</Link>
+          <li className="p-4">
+            <Link href="/" className="block">Home</Link>
           </li>
-          <li>
-            <Link href="/projects">Projects</Link>
+          <li className="p-4">
+            <Link href="/projects" className="block">Projects</Link>
           </li>
-          <li>
-            <Link href="/experience">Experience</Link>
+          <li className="p-4">
+            <Link href="/experience" className="block">Experience</Link>
           </li>
-          <li>
-            <Link href="/connect">Let&apos;s Connect</Link> {/* Escaped single quote */}
+          <li className="p-4">
+            <Link href="/connect" className="block">Let&apos;s Connect</Link>
           </li>
         </ul>
       </nav>
