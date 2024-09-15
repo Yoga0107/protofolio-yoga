@@ -1,5 +1,6 @@
 // src/app/components/ImageModal.tsx
 import React from 'react';
+import Image from 'next/image'; // Import Image from next/image
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -16,7 +17,13 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, imageSrc }) =>
         <button className="absolute top-2 right-2 text-white" onClick={onClose}>
           &times;
         </button>
-        <img src={imageSrc} alt="Profile preview" className="w-full h-auto rounded-lg" />
+        <Image 
+          src={imageSrc} 
+          alt="Profile preview" 
+          className="w-full h-auto rounded-lg" 
+          width={600} // Set the desired width
+          height={400} // Set the desired height
+        />
       </div>
     </div>
   );

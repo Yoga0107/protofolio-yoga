@@ -62,7 +62,7 @@ export default function Home() {
         <section className="mt-12">
           <h2 className="text-3xl font-bold mb-4 animate__animated animate__fadeIn">Testimonials</h2>
           <blockquote className="border-l-4 border-blue-400 pl-4 text-gray-300 animate__animated animate__fadeIn">
-            <p>"Yoga is an exceptional developer. His attention to detail and ability to solve problems quickly made a significant impact on our projects."</p>
+            <p>&quot;Yoga is an exceptional developer. His attention to detail and ability to solve problems quickly made a significant impact on our projects.&quot;</p>
             <footer className="mt-2 text-gray-400">- Client Name</footer>
           </blockquote>
         </section>
