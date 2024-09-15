@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import './globals.css'; // Import your global styles if any
 import { ReactNode } from 'react';
+import SideNav from '../components/SideNav'; // Import the SideNav component
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -8,8 +9,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <title>Your Portfolio</title> {/* Set your title here */}
       </head>
-      <body>
-        {children} {/* This will render the pages */}
+      <body className="flex bg-gray-900 text-gray-100 min-h-screen">
+        <SideNav /> {/* Place SideNav here to make it appear on all pages */}
+        <main className="flex-1 p-8 ml-[300px]"> {/* Adjust margin based on your SideNav width */}
+          {children} {/* This will render the pages */}
+        </main>
       </body>
     </html>
   );
