@@ -1,11 +1,12 @@
 // src/app/page.tsx
+"use client"; // Mark this as a Client Component
 import SideNav from "./components/SideNav";
 
 export default function Home() {
   return (
     <div className="flex">
       <SideNav />
-      <main className="flex-1 p-8">
+      <main className="flex-1 p-8 ml-64 md:ml-16"> {/* Adjust left margin for larger screens */}
         <h1 className="text-3xl font-bold">Hello</h1>
         <p className="mt-4">
           I&apos;m <span className="font-bold">Yoga Arditya Putra</span><br />
